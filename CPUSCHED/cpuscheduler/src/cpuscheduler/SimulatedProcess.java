@@ -20,11 +20,18 @@ public class SimulatedProcess {
 	public void setArrivalTime(int arrivalTime) {
 		ArrivalTime = arrivalTime;
 	}
+	
 	public int getBurstTime() {
 		return BurstTime;
 	}
+	
 	public void setBurstTime(int burstTime) {
 		BurstTime = burstTime;
+	}
+	
+	@Override
+	public String toString() {
+		return "SimulatedProcess [ArrivalTime=" + ArrivalTime + ", BurstTime=" + BurstTime + "]";
 	}
 	
 }
