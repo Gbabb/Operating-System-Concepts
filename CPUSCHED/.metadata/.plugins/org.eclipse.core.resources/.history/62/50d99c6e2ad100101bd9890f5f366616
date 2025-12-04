@@ -1,0 +1,19 @@
+package cpuscheduler;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		FIFO_Scheduler fifoscheduler = new FIFO_Scheduler();
+		SJF_Scheduler sjfscheduler = new SJF_Scheduler();
+		List<SimulatedProcess> processList = new ArrayList<SimulatedProcess>();
+	}
+	
+	public List<SimulatedProcess> readData(){
+		List<SimulatedProcess> processList = new ArrayList<SimulatedProcess>();
+		
+		return processList;
+	}
+
+}
