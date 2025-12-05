@@ -1,12 +1,12 @@
 package cpuscheduler;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
 
 public class Main {
 
 	public static void main(String[] args) {
+		
 		//Reads in our data file
 		ArrayList<SimulatedProcess> processList = new ArrayList<SimulatedProcess>();
 		processList = readData();
@@ -14,10 +14,9 @@ public class Main {
 		//Creates our schedulers
 		FIFO_Scheduler fifoscheduler = new FIFO_Scheduler(processList);
 		SJF_Scheduler sjfscheduler = new SJF_Scheduler(processList);
-		
-		//Runs the schedulers and outputs
-		fifoscheduler.processAndOutput();
-		sjfscheduler.processAndOutput();
+
+		//Sends the schedulers to be activated and written
+		writeData(fifoscheduler, sjfscheduler);
 	}
 	
 	//Reads in our data and returns an ArrayList filled with all the processes in our .txt file
@@ -48,6 +47,23 @@ public class Main {
 		}
 		
 		return processList;
+	}
+	
+	//Receives our two schedulers, runs their code to process the lists, takes their system outputs and writes them to a file "SchedulerOutputs.txt"
+	public static void writeData(FIFO_Scheduler fifoscheduler, SJF_Scheduler sjfscheduler) {
+		
+		try {
+			PrintStream fileOutput = new PrintStream(new FileOutputStream("SchedulerOutputs.txt"));
+					
+			//Our schedulers output to console by default and I didn't want to change this. This code will redirect their actions to a file.
+			System.setOut(fileOutput);
+			fifoscheduler.processAndOutput();
+			sjfscheduler.processAndOutput();
+			fileOutput.close();
+		} catch (Exception e) {
+			System.setOut(System.out); 
+			e.printStackTrace();
+		}
 	}
 
 }

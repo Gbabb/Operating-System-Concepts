@@ -1,0 +1,26 @@
+-------------------------------------
+Statistics for the FIFO Scheduler Run
+
+
+Number of processes: 500
+Total elapsed time: 14744 Units of Time
+Throughput: 0.034 processes executed in one unit of CPU burst time
+CPU utilization: 71.61 percent
+Average waiting time: 17.88 Units of Time
+Average turn-around time: 39.00 Units of Time
+Average response time: 17.88 Units of Time
+-------------------------------------
+
+-------------------------------------
+Statistics for the SJF Scheduler Run
+
+
+Number of processes: 500
+Total elapsed time: 14744 Units of Time
+Throughput: 0.034 processes executed in one unit of CPU burst time
+CPU utilization: 71.61 percent
+Average waiting time: 14.24 Units of Time
+Average turn-around time: 35.36 Units of Time
+Average response time: 14.24 Units of Time
+-------------------------------------
+

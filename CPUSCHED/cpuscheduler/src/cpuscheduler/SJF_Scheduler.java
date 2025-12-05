@@ -8,8 +8,6 @@ public class SJF_Scheduler {
 
 		//ArrayList with input data
 		private ArrayList<SimulatedProcess> processList;
-		//Queue that automatically keeps the shortest job at the front
-		private PriorityQueue<SimulatedProcess> readyQueue = new PriorityQueue<>(Comparator.comparingInt(SimulatedProcess::getBurstTime));
 		
 		//Variables to be displayed
 		private int numProcesses;
@@ -19,6 +17,9 @@ public class SJF_Scheduler {
 		private double avg_WaitTime;
 		private double avg_TurnaroundTime;
 		private double avg_ResponseTime;
+		private double totalWaitTime;
+		private double totalTurnaroundTime;
+		private double totalResponseTime;
 		
 		//Variables for calculation
 		private int totalBurstTime;
@@ -34,7 +35,8 @@ public class SJF_Scheduler {
 			this.setAvg_WaitTime(-1);
 			this.setAvg_TurnaroundTime(-1);
 		}
-
+		
+		//Getters and setters
 		//Getters and Setters
 		public int getNumProcesses() {
 			return numProcesses;
@@ -96,34 +98,26 @@ public class SJF_Scheduler {
 		private void setAvg_ResponseTime(double avg_ResponseTime) {
 			this.avg_ResponseTime = avg_ResponseTime;
 		}
-
-		
-		//Computes total elapsed time, total burst times, and total idle time by adding up the burst times plus any gaps in arrival time. 
-		//Assumes our process list is already sorted by arrival time, which is the case in our provided input.txt
-		private void computeElapsedTime() {
-			int currentTime = 0;
-			int BurstTime = 0;
-			int IdleTime = 0;
-			
-			for (SimulatedProcess s: processList) {
-				if(s.getArrivalTime() <= currentTime) {
-					currentTime += s.getBurstTime();
-					BurstTime += s.getBurstTime();
-				}
-				else {
-					IdleTime += s.getArrivalTime() - currentTime;
-					currentTime = s.getArrivalTime();
-					BurstTime += s.getBurstTime();
-					currentTime += s.getBurstTime();
-				}
-			}
-			
-			this.setElapsedTime(currentTime);
-			this.setTotalBurstTime(BurstTime);
-			this.setTotalIdleTime(IdleTime);
+		public double getTotalWaitTime() {
+			return totalWaitTime;
 		}
-		
-		//Divides processes by total burst time to compute how many processes are run per one unit of BURST time
+		public void setTotalWaitTime(double totalWaitTime) {
+			this.totalWaitTime = totalWaitTime;
+		}
+		public double getTotalTurnaroundTime() {
+			return totalTurnaroundTime;
+		}
+		public void setTotalTurnaroundTime(double totalTurnaroundTime) {
+			this.totalTurnaroundTime = totalTurnaroundTime;
+		}
+		public double getTotalResponseTime() {
+			return totalResponseTime;
+		}
+		public void setTotalResponseTime(double totalResponseTime) {
+			this.totalResponseTime = totalResponseTime;
+		}
+
+		//Divides processes by total elapsed time to compute how many processes are run per one unit of time
 		private void computeThroughput() {
 			this.setThroughput((double) numProcesses / elapsedTime);
 		}
@@ -131,78 +125,6 @@ public class SJF_Scheduler {
 		//Divides total elapsed time by the time spent idle to determine the percentage of time the CPU was utilized
 		private void computeCPUUtilization() {
 			this.setCpu_Utilization(((double)(elapsedTime - totalIdleTime) / elapsedTime) * 100);
-		}
-		
-		//Measures the average amount of time a process has been waiting in the ready queue
-		private void computeAverageWaitTime() {
-			int currentTime = 0;
-			int totalWaitTime = 0;
-			
-			for (SimulatedProcess s: processList) {
-				if (s.getArrivalTime() < currentTime) {
-					totalWaitTime += (currentTime - s.getArrivalTime());
-					currentTime += s.getBurstTime();
-				}
-				else if(s.getArrivalTime() == currentTime) {
-					currentTime += s.getBurstTime();
-				}
-				else {
-					currentTime = s.getArrivalTime();
-					currentTime += s.getBurstTime();
-				}
-			}
-			
-			this.setAvg_WaitTime((double) totalWaitTime / numProcesses);
-		}
-		
-		//Measures the average amount of time from when a process arrives to when it is executed
-		private void computeAverageTurnaroundTime() {
-			int currentTime = 0;
-			
-			int totalCompletionTime = 0;
-			
-			for (SimulatedProcess s: processList) {
-				int waitTime = 0;
-				
-				if (s.getArrivalTime() < currentTime) {
-					waitTime = (currentTime - s.getArrivalTime());
-					totalCompletionTime += waitTime + s.getBurstTime();
-					currentTime += s.getBurstTime();
-				}
-				else if(s.getArrivalTime() == currentTime) {
-					totalCompletionTime += s.getBurstTime();
-					currentTime += s.getBurstTime();
-				}
-				else {
-					currentTime = s.getArrivalTime();
-					currentTime += s.getBurstTime();
-					totalCompletionTime += s.getBurstTime();
-				}
-			}
-			
-			this.setAvg_TurnaroundTime((double) totalCompletionTime/numProcesses);
-		}
-		
-		//Measures the average mount of time it takes from when a request was submitted until the first response is produced
-		private void computeAverageResponseTime() {
-			int currentTime = 0;
-			int totalTimeUntilResponse = 0;
-			
-			for (SimulatedProcess s: processList) {
-				if (s.getArrivalTime() < currentTime) {
-					totalTimeUntilResponse += currentTime - s.getArrivalTime();
-					currentTime += s.getBurstTime();
-				}
-				else if(s.getArrivalTime() == currentTime) {
-					currentTime += s.getBurstTime();
-				}
-				else {
-					currentTime = s.getArrivalTime();
-					currentTime += s.getBurstTime();
-				}
-			}
-			
-			this.setAvg_ResponseTime((double) totalTimeUntilResponse / numProcesses);
 		}
 		
 		/*
@@ -217,14 +139,75 @@ public class SJF_Scheduler {
 		 * Average response time (in CPU burst times)
 		 */
 		public void processAndOutput() {
-			this.computeElapsedTime();
-			this.computeThroughput();
-			this.computeCPUUtilization();
-			this.computeAverageWaitTime();
-			this.computeAverageTurnaroundTime();
-			this.computeAverageResponseTime();
+		    
+			//Ready queue that keeps track of processes that have arrived, sorting them by the shortest first (FIFO if two processes are identical in burst)
+			PriorityQueue<SimulatedProcess> readyQueue = new PriorityQueue<>(Comparator.comparingInt(SimulatedProcess::getBurstTime).thenComparingInt(SimulatedProcess::getArrivalTime));
+		    
+		    //Necessary variables
+		    int currentTime = 0;
+		    int completedCount = 0;
+		    int pIndex = 0;
+		    
+		    //Zero out overall variables, default states are -1 for bug testing
+		    setTotalWaitTime(0);
+		    setTotalTurnaroundTime(0);
+		    setTotalResponseTime(0);
+		    setTotalIdleTime(0);
+
+		    // Loop until all processes are completed
+		    while (completedCount < numProcesses) {
+
+		       //While we haven't gone through every process and the current arrival time of the index of the process is less than or equal to the current time, add this process to the ready queue
+		        while (pIndex < numProcesses && processList.get(pIndex).getArrivalTime() <= currentTime) {
+		            readyQueue.add(processList.get(pIndex));
+		            pIndex++;
+		        }
+
+		        //If the ready queue isn't empty, retrieve and remove the process at the head of the queue
+		        if (!readyQueue.isEmpty()) {
+		            SimulatedProcess currentProcess = readyQueue.poll();
+		            
+		            //calculate wait time
+		            int waitTime = currentTime - currentProcess.getArrivalTime();
+		            totalWaitTime += waitTime;
+
+		            //calculate response time, which should be the same as wait time because this is non-preemptive
+		            totalResponseTime += waitTime;
+
+		            //advance our time to the end of the current process
+		            currentTime += currentProcess.getBurstTime();
+
+		            //calculate turn-around time, the time from arrival to completion of execution
+		            int turnaroundTime = currentTime - currentProcess.getArrivalTime();
+		            totalTurnaroundTime += turnaroundTime;
+		            
+		            //Mark process as completed
+		            completedCount++;
+		        } else if (pIndex < numProcesses) {
+		        	//This else if will only occur if the ready queue is empty, meaning that not all processes are complete but there is a gap in arrival times (idle time)
+		                SimulatedProcess nextProcess = processList.get(pIndex);
+		                
+		                //Calculate Idle time
+		                int idleTime = nextProcess.getArrivalTime() - currentTime;
+		                totalIdleTime += idleTime;
+		                
+		                //Advance the time
+		                currentTime = nextProcess.getArrivalTime();
+		            }
+		        }
+
+		    //Store our calculations. I've gotten rid of the functions for this from the FIFO scheduler because the logic changed so significantly and the user isn't accessing them anyway.
+		    setElapsedTime(currentTime);
+		    setTotalIdleTime(totalIdleTime);
+		    
+		    computeThroughput();
+			computeCPUUtilization();
+			setAvg_WaitTime((double) totalWaitTime / numProcesses);
+		    setAvg_TurnaroundTime((double) totalTurnaroundTime / numProcesses);
+		    setAvg_ResponseTime((double) totalResponseTime / numProcesses);
 			
-			System.out.println("Statistics for the Run");
+		    System.out.println("-------------------------------------");
+			System.out.println("Statistics for the SJF Scheduler Run");
 			System.out.println("\n");
 			System.out.println("Number of processes: " + this.numProcesses);
 			System.out.println("Total elapsed time: " + this.elapsedTime + " Units of Time");
@@ -233,6 +216,7 @@ public class SJF_Scheduler {
 			System.out.printf("Average waiting time: %.2f Units of Time%n", this.avg_WaitTime);
 			System.out.printf("Average turn-around time: %.2f Units of Time%n", this.avg_TurnaroundTime);
 			System.out.printf("Average response time: %.2f Units of Time%n", this.avg_ResponseTime);
+			System.out.println("-------------------------------------");
+			System.out.println();
 		}
-	
 }

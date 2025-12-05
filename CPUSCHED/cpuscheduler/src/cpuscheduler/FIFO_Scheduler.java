@@ -118,7 +118,7 @@ public class FIFO_Scheduler {
 		this.setTotalIdleTime(IdleTime);
 	}
 	
-	//Divides processes by total burst time to compute how many processes are run per one unit of BURST time
+	//Divides processes by total elapsed time to compute how many processes are run per one unit of BURST time
 	private void computeThroughput() {
 		this.setThroughput((double) numProcesses / elapsedTime);
 	}
@@ -219,7 +219,8 @@ public class FIFO_Scheduler {
 		this.computeAverageTurnaroundTime();
 		this.computeAverageResponseTime();
 		
-		System.out.println("Statistics for the Run");
+		System.out.println("-------------------------------------");
+		System.out.println("Statistics for the FIFO Scheduler Run");
 		System.out.println("\n");
 		System.out.println("Number of processes: " + this.numProcesses);
 		System.out.println("Total elapsed time: " + this.elapsedTime + " Units of Time");
@@ -228,6 +229,8 @@ public class FIFO_Scheduler {
 		System.out.printf("Average waiting time: %.2f Units of Time%n", this.avg_WaitTime);
 		System.out.printf("Average turn-around time: %.2f Units of Time%n", this.avg_TurnaroundTime);
 		System.out.printf("Average response time: %.2f Units of Time%n", this.avg_ResponseTime);
+		System.out.println("-------------------------------------");
+		System.out.println();
 	}
 	
 }
