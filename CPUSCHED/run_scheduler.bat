@@ -1,4 +1,4 @@
 @echo off
 echo Starting CPU Scheduler...
-java -jar cpuscheduler_executable.jar
+java -jar Scheduler.jar
 pause

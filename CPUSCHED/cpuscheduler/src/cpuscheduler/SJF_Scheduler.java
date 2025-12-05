@@ -1,8 +1,8 @@
 package cpuscheduler;
 
 import java.util.ArrayList;
-import java.util.PriorityQueue;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class SJF_Scheduler {
 
@@ -117,14 +117,14 @@ public class SJF_Scheduler {
 			this.totalResponseTime = totalResponseTime;
 		}
 
-		//Divides processes by total elapsed time to compute how many processes are run per one unit of time
+		//Calculates Total burst time / Total number of processes, as specified on our spec sheet
 		private void computeThroughput() {
-			this.setThroughput((double) numProcesses / elapsedTime);
+			this.setThroughput((double) totalBurstTime / numProcesses);
 		}
 		
-		//Divides total elapsed time by the time spent idle to determine the percentage of time the CPU was utilized
+		//Calculates Total Burst Time/ Total elapsed time, as specified on our spec sheet
 		private void computeCPUUtilization() {
-			this.setCpu_Utilization(((double)(elapsedTime - totalIdleTime) / elapsedTime) * 100);
+			this.setCpu_Utilization((double) totalBurstTime / elapsedTime);
 		}
 		
 		/*
@@ -166,6 +166,8 @@ public class SJF_Scheduler {
 		        //If the ready queue isn't empty, retrieve and remove the process at the head of the queue
 		        if (!readyQueue.isEmpty()) {
 		            SimulatedProcess currentProcess = readyQueue.poll();
+
+					totalBurstTime += currentProcess.getBurstTime();
 		            
 		            //calculate wait time
 		            int waitTime = currentTime - currentProcess.getArrivalTime();

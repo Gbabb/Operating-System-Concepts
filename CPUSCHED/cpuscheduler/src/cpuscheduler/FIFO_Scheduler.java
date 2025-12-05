@@ -118,14 +118,14 @@ public class FIFO_Scheduler {
 		this.setTotalIdleTime(IdleTime);
 	}
 	
-	//Divides processes by total elapsed time to compute how many processes are run per one unit of BURST time
+	//Calculates total burst time / Total number of processes, as specified on our spec sheet
 	private void computeThroughput() {
-		this.setThroughput((double) numProcesses / elapsedTime);
+		this.setThroughput((double) totalBurstTime/ numProcesses);
 	}
 	
-	//Divides total elapsed time by the time spent idle to determine the percentage of time the CPU was utilized
+	//Calculates Total Burst Time/ Total elapsed time, as specified on our spec sheet
 	private void computeCPUUtilization() {
-		this.setCpu_Utilization(((double)(elapsedTime - totalIdleTime) / elapsedTime) * 100);
+		this.setCpu_Utilization((double) totalBurstTime / elapsedTime);
 	}
 	
 	//Measures the average amount of time a process has been waiting in the ready queue
