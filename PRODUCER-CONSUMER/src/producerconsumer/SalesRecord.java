@@ -1,7 +1,14 @@
 package producerconsumer;
 
-public class SalesRecord {
+/*
+Specs state:
+Each buffer item contains the following information: Sales Date (DD/MM/YY), store ID
+(integer), register# (integer), sale amount (float). Each item represents a sales record
+from a specific cashier register in a particular location of a retail chain.
+*/
 
+public class SalesRecord {
+	//Necessary fields
 	public int day;
     public int month;
     public final int YEAR = 16;
@@ -17,39 +24,4 @@ public class SalesRecord {
         this.registerID = reg;
         this.amount = amt;
     }
-
-    //Getters and Setters
-	public int getDay() {
-		return day;
-	}
-	public void setDay(int day) {
-		this.day = day;
-	}
-	public int getMonth() {
-		return month;
-	}
-	public void setMonth(int month) {
-		this.month = month;
-	}
-	public int getStoreID() {
-		return storeID;
-	}
-	public void setStoreID(int storeID) {
-		this.storeID = storeID;
-	}
-	public int getRegisterID() {
-		return registerID;
-	}
-	public void setRegisterID(int registerID) {
-		this.registerID = registerID;
-	}
-	public float getAmount() {
-		return amount;
-	}
-	public void setAmount(float amount) {
-		this.amount = amount;
-	}
-	public int getYEAR() {
-		return YEAR;
-	}
 }
