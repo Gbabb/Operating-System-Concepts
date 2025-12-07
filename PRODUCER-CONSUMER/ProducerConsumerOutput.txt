@@ -3,415 +3,415 @@ Beginning 9 run simulation
 
 Running Scenario: Producers = 2, Consumers = 2
 
-Special flag detected. Consumer 1 is terminating.
-
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 256426.96
-Consumer 1 finished. Total sales amount processed by this consumer: 257925.69
+
+Special flag detected. Consumer 1 is terminating.
+Consumer 1 finished. Total sales amount processed by this consumer: 251424.72
+Consumer 2 finished. Total sales amount processed by this consumer: 256925.45
 
 
 Report for Scenario: Producers = 2, Consumers = 2
 
 Store-wide total sales:
-  Store  1: $260806.40
-  Store  2: $253546.25
+  Store  1: $255660.02
+  Store  2: $252690.15
 Month-wise total sales:
-  Month  1: $38442.89
-  Month  2: $41308.68
-  Month  3: $36572.72
-  Month  4: $51366.99
-  Month  5: $36634.20
-  Month  6: $38880.47
-  Month  7: $40584.35
-  Month  8: $47247.11
-  Month  9: $47818.03
-  Month 10: $47118.84
-  Month 11: $41827.67
-  Month 12: $46550.71
-Aggregate sales: $514352.65
-Total time for simulation: 11719 ms
+  Month  1: $46371.01
+  Month  2: $46052.63
+  Month  3: $42291.61
+  Month  4: $40969.63
+  Month  5: $43429.60
+  Month  6: $44326.28
+  Month  7: $35383.65
+  Month  8: $42156.76
+  Month  9: $42256.82
+  Month 10: $41439.77
+  Month 11: $47868.93
+  Month 12: $35803.48
+Aggregate sales: $508350.17
+Total time for simulation: 11506 ms
 
 Running Scenario: Producers = 2, Consumers = 5
 
+Special flag detected. Consumer 3 is terminating.
+Consumer 3 finished. Total sales amount processed by this consumer: 105333.05
+
 Special flag detected. Consumer 4 is terminating.
-Consumer 4 finished. Total sales amount processed by this consumer: 101766.89
+Consumer 4 finished. Total sales amount processed by this consumer: 98224.83
 
 Special flag detected. Consumer 5 is terminating.
-Consumer 5 finished. Total sales amount processed by this consumer: 97345.24
+Consumer 5 finished. Total sales amount processed by this consumer: 103667.71
 
 Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 101986.69
+Consumer 1 finished. Total sales amount processed by this consumer: 97433.86
 
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 100057.66
-
-Special flag detected. Consumer 3 is terminating.
-Consumer 3 finished. Total sales amount processed by this consumer: 104552.34
+Consumer 2 finished. Total sales amount processed by this consumer: 99273.93
 
 
 Report for Scenario: Producers = 2, Consumers = 5
 
 Store-wide total sales:
-  Store  1: $260725.02
-  Store  2: $244983.79
+  Store  1: $244806.48
+  Store  2: $259126.91
 Month-wise total sales:
-  Month  1: $47622.26
-  Month  2: $43584.82
-  Month  3: $41594.02
-  Month  4: $42100.50
-  Month  5: $39603.92
-  Month  6: $47416.76
-  Month  7: $32769.77
-  Month  8: $39118.46
-  Month  9: $46418.51
-  Month 10: $35270.97
-  Month 11: $49047.69
-  Month 12: $41161.16
-Aggregate sales: $505708.82
-Total time for simulation: 11620 ms
+  Month  1: $33487.75
+  Month  2: $44491.04
+  Month  3: $46605.15
+  Month  4: $45618.06
+  Month  5: $43740.13
+  Month  6: $32521.71
+  Month  7: $38492.41
+  Month  8: $51847.44
+  Month  9: $42617.25
+  Month 10: $46277.10
+  Month 11: $37225.79
+  Month 12: $41009.56
+Aggregate sales: $503933.39
+Total time for simulation: 11871 ms
 
 Running Scenario: Producers = 2, Consumers = 10
 
-Special flag detected. Consumer 6 is terminating.
-Consumer 6 finished. Total sales amount processed by this consumer: 47425.75
-
-Special flag detected. Consumer 8 is terminating.
-Consumer 8 finished. Total sales amount processed by this consumer: 52829.33
-
 Special flag detected. Consumer 9 is terminating.
-Consumer 9 finished. Total sales amount processed by this consumer: 50807.37
+Consumer 9 finished. Total sales amount processed by this consumer: 49193.16
 
 Special flag detected. Consumer 10 is terminating.
-Consumer 10 finished. Total sales amount processed by this consumer: 52758.54
+Consumer 10 finished. Total sales amount processed by this consumer: 52101.15
 
 Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 47172.24
+Consumer 1 finished. Total sales amount processed by this consumer: 48279.01
 
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 50054.51
+Consumer 2 finished. Total sales amount processed by this consumer: 48160.25
 
 Special flag detected. Consumer 3 is terminating.
-Consumer 3 finished. Total sales amount processed by this consumer: 49646.67
+Consumer 3 finished. Total sales amount processed by this consumer: 49134.87
 
 Special flag detected. Consumer 4 is terminating.
-Consumer 4 finished. Total sales amount processed by this consumer: 53253.64
+Consumer 4 finished. Total sales amount processed by this consumer: 49964.22
 
 Special flag detected. Consumer 5 is terminating.
-Consumer 5 finished. Total sales amount processed by this consumer: 49944.13
+Consumer 5 finished. Total sales amount processed by this consumer: 48502.75
+
+Special flag detected. Consumer 6 is terminating.
+Consumer 6 finished. Total sales amount processed by this consumer: 47976.45
 
 Special flag detected. Consumer 7 is terminating.
-Consumer 7 finished. Total sales amount processed by this consumer: 51895.40
+Consumer 7 finished. Total sales amount processed by this consumer: 50277.62
+
+Special flag detected. Consumer 8 is terminating.
+Consumer 8 finished. Total sales amount processed by this consumer: 52064.82
 
 
 Report for Scenario: Producers = 2, Consumers = 10
 
 Store-wide total sales:
-  Store  1: $253083.76
-  Store  2: $252703.82
+  Store  1: $254908.63
+  Store  2: $240745.68
 Month-wise total sales:
-  Month  1: $42495.77
-  Month  2: $36941.35
-  Month  3: $39892.24
-  Month  4: $36939.11
-  Month  5: $40123.16
-  Month  6: $40695.84
-  Month  7: $40907.33
-  Month  8: $45610.15
-  Month  9: $41449.65
-  Month 10: $45780.08
-  Month 11: $33643.50
-  Month 12: $61309.42
-Aggregate sales: $505787.58
-Total time for simulation: 11522 ms
+  Month  1: $43579.03
+  Month  2: $41129.44
+  Month  3: $37344.98
+  Month  4: $42382.83
+  Month  5: $42652.26
+  Month  6: $41388.83
+  Month  7: $50147.31
+  Month  8: $38495.94
+  Month  9: $41987.41
+  Month 10: $35245.44
+  Month 11: $45499.87
+  Month 12: $35800.97
+Aggregate sales: $495654.31
+Total time for simulation: 11283 ms
 
 Running Scenario: Producers = 5, Consumers = 2
 
-Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 251991.58
-
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 256408.49
+Consumer 2 finished. Total sales amount processed by this consumer: 255110.19
+
+Special flag detected. Consumer 1 is terminating.
+Consumer 1 finished. Total sales amount processed by this consumer: 259334.59
 
 
 Report for Scenario: Producers = 5, Consumers = 2
 
 Store-wide total sales:
-  Store  1: $104397.81
-  Store  2: $102001.83
-  Store  3: $103124.95
-  Store  4: $96064.56
-  Store  5: $102810.93
+  Store  1: $105757.68
+  Store  2: $109009.34
+  Store  3: $100443.67
+  Store  4: $100365.75
+  Store  5: $98868.33
 Month-wise total sales:
-  Month  1: $50066.76
-  Month  2: $41071.50
-  Month  3: $30120.38
-  Month  4: $46330.69
-  Month  5: $42394.05
-  Month  6: $45243.82
-  Month  7: $41390.62
-  Month  8: $40966.35
-  Month  9: $42424.13
-  Month 10: $42852.03
-  Month 11: $43514.79
-  Month 12: $42024.95
-Aggregate sales: $508400.08
-Total time for simulation: 4616 ms
+  Month  1: $37164.15
+  Month  2: $43987.39
+  Month  3: $52949.32
+  Month  4: $38837.86
+  Month  5: $40915.19
+  Month  6: $47180.00
+  Month  7: $43022.54
+  Month  8: $42828.93
+  Month  9: $49023.80
+  Month 10: $35393.48
+  Month 11: $45930.40
+  Month 12: $37211.70
+Aggregate sales: $514444.78
+Total time for simulation: 4619 ms
 
 Running Scenario: Producers = 5, Consumers = 5
 
-Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 101140.49
-
-Special flag detected. Consumer 3 is terminating.
-Consumer 3 finished. Total sales amount processed by this consumer: 101134.14
-
-Special flag detected. Consumer 4 is terminating.
-Consumer 4 finished. Total sales amount processed by this consumer: 95039.44
+Special flag detected. Consumer 5 is terminating.
+Consumer 5 finished. Total sales amount processed by this consumer: 94427.59
 
 Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 102641.00
+Consumer 1 finished. Total sales amount processed by this consumer: 105329.51
 
-Special flag detected. Consumer 5 is terminating.
-Consumer 5 finished. Total sales amount processed by this consumer: 96407.58
+Special flag detected. Consumer 2 is terminating.
+Consumer 2 finished. Total sales amount processed by this consumer: 99420.67
+
+Special flag detected. Consumer 3 is terminating.
+Consumer 3 finished. Total sales amount processed by this consumer: 101901.32
+
+Special flag detected. Consumer 4 is terminating.
+Consumer 4 finished. Total sales amount processed by this consumer: 105833.21
 
 
 Report for Scenario: Producers = 5, Consumers = 5
 
 Store-wide total sales:
-  Store  1: $100635.51
-  Store  2: $95898.42
-  Store  3: $96281.16
-  Store  4: $101148.37
-  Store  5: $102399.18
+  Store  1: $100924.46
+  Store  2: $113670.32
+  Store  3: $94740.51
+  Store  4: $99405.94
+  Store  5: $98171.06
 Month-wise total sales:
-  Month  1: $45655.19
-  Month  2: $44818.90
-  Month  3: $37417.51
-  Month  4: $45653.49
-  Month  5: $43654.10
-  Month  6: $39596.16
-  Month  7: $39051.12
-  Month  8: $43176.86
-  Month  9: $49539.32
-  Month 10: $36510.75
-  Month 11: $33502.93
-  Month 12: $37786.32
-Aggregate sales: $496362.64
-Total time for simulation: 4544 ms
+  Month  1: $40186.30
+  Month  2: $47787.08
+  Month  3: $45162.53
+  Month  4: $44372.05
+  Month  5: $41088.75
+  Month  6: $30730.62
+  Month  7: $35682.06
+  Month  8: $37768.11
+  Month  9: $44692.76
+  Month 10: $44820.90
+  Month 11: $52519.46
+  Month 12: $42101.67
+Aggregate sales: $506912.29
+Total time for simulation: 4688 ms
 
 Running Scenario: Producers = 5, Consumers = 10
 
-Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 49596.81
-
-Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 51770.40
-
-Special flag detected. Consumer 3 is terminating.
-Consumer 3 finished. Total sales amount processed by this consumer: 47006.39
-
-Special flag detected. Consumer 4 is terminating.
-Consumer 4 finished. Total sales amount processed by this consumer: 49597.78
-
-Special flag detected. Consumer 5 is terminating.
-Consumer 5 finished. Total sales amount processed by this consumer: 51109.70
-
-Special flag detected. Consumer 7 is terminating.
-Consumer 7 finished. Total sales amount processed by this consumer: 48163.54
-
-Special flag detected. Consumer 8 is terminating.
-Consumer 8 finished. Total sales amount processed by this consumer: 50739.35
+Special flag detected. Consumer 9 is terminating.
+Consumer 9 finished. Total sales amount processed by this consumer: 49536.91
 
 Special flag detected. Consumer 6 is terminating.
-Consumer 6 finished. Total sales amount processed by this consumer: 54694.47
+Consumer 6 finished. Total sales amount processed by this consumer: 50256.04
 
-Special flag detected. Consumer 9 is terminating.
-Consumer 9 finished. Total sales amount processed by this consumer: 48668.43
+Special flag detected. Consumer 7 is terminating.
+Consumer 7 finished. Total sales amount processed by this consumer: 52586.12
 
 Special flag detected. Consumer 10 is terminating.
-Consumer 10 finished. Total sales amount processed by this consumer: 49398.94
+Consumer 10 finished. Total sales amount processed by this consumer: 53455.09
+
+Special flag detected. Consumer 1 is terminating.
+Consumer 1 finished. Total sales amount processed by this consumer: 55178.65
+
+Special flag detected. Consumer 2 is terminating.
+Consumer 2 finished. Total sales amount processed by this consumer: 52602.42
+
+Special flag detected. Consumer 3 is terminating.
+Consumer 3 finished. Total sales amount processed by this consumer: 53588.65
+
+Special flag detected. Consumer 4 is terminating.
+Consumer 4 finished. Total sales amount processed by this consumer: 48338.49
+
+Special flag detected. Consumer 5 is terminating.
+Consumer 5 finished. Total sales amount processed by this consumer: 52212.30
+
+Special flag detected. Consumer 8 is terminating.
+Consumer 8 finished. Total sales amount processed by this consumer: 48088.42
 
 
 Report for Scenario: Producers = 5, Consumers = 10
 
 Store-wide total sales:
-  Store  1: $92542.67
-  Store  2: $93967.92
-  Store  3: $101100.11
-  Store  4: $110180.39
-  Store  5: $102954.71
+  Store  1: $104373.67
+  Store  2: $97008.87
+  Store  3: $111021.47
+  Store  4: $108073.29
+  Store  5: $95365.80
 Month-wise total sales:
-  Month  1: $31136.73
-  Month  2: $40856.13
-  Month  3: $49715.97
-  Month  4: $40349.67
-  Month  5: $39858.18
-  Month  6: $54166.69
-  Month  7: $44967.94
-  Month  8: $40072.52
-  Month  9: $40200.71
-  Month 10: $37418.94
-  Month 11: $41272.44
-  Month 12: $40729.87
-Aggregate sales: $500745.81
-Total time for simulation: 4588 ms
+  Month  1: $43189.73
+  Month  2: $48517.57
+  Month  3: $40533.13
+  Month  4: $45295.61
+  Month  5: $46978.68
+  Month  6: $35179.97
+  Month  7: $35999.53
+  Month  8: $42204.10
+  Month  9: $48446.04
+  Month 10: $41305.80
+  Month 11: $35934.43
+  Month 12: $52258.52
+Aggregate sales: $515843.10
+Total time for simulation: 4658 ms
 
 Running Scenario: Producers = 10, Consumers = 2
 
 Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 258690.28
+Consumer 1 finished. Total sales amount processed by this consumer: 252030.76
 
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 243111.70
+Consumer 2 finished. Total sales amount processed by this consumer: 261956.52
 
 
 Report for Scenario: Producers = 10, Consumers = 2
 
 Store-wide total sales:
-  Store  1: $48554.84
-  Store  2: $51550.74
-  Store  3: $52306.05
-  Store  4: $47617.71
-  Store  5: $51155.20
-  Store  6: $50919.59
-  Store  7: $52266.45
-  Store  8: $48552.34
-  Store  9: $49064.41
-  Store 10: $49814.66
+  Store  1: $50276.43
+  Store  2: $52700.97
+  Store  3: $53107.73
+  Store  4: $47473.66
+  Store  5: $56527.44
+  Store  6: $48511.10
+  Store  7: $50545.32
+  Store  8: $47972.92
+  Store  9: $51013.25
+  Store 10: $55858.45
 Month-wise total sales:
-  Month  1: $42815.82
-  Month  2: $41718.53
-  Month  3: $39773.77
-  Month  4: $35466.84
-  Month  5: $42661.40
-  Month  6: $49807.93
-  Month  7: $34728.58
-  Month  8: $41438.17
-  Month  9: $59052.97
-  Month 10: $36456.17
-  Month 11: $36690.27
-  Month 12: $41191.53
-Aggregate sales: $501801.98
-Total time for simulation: 2310 ms
+  Month  1: $36650.31
+  Month  2: $43108.50
+  Month  3: $34978.59
+  Month  4: $51314.73
+  Month  5: $46427.62
+  Month  6: $52988.81
+  Month  7: $38911.70
+  Month  8: $47502.86
+  Month  9: $31608.24
+  Month 10: $38549.07
+  Month 11: $38176.52
+  Month 12: $53770.33
+Aggregate sales: $513987.28
+Total time for simulation: 2345 ms
 
 Running Scenario: Producers = 10, Consumers = 5
 
-Special flag detected. Consumer 3 is terminating.
-Consumer 3 finished. Total sales amount processed by this consumer: 105668.53
+Special flag detected. Consumer 1 is terminating.
+Consumer 1 finished. Total sales amount processed by this consumer: 97889.51
 
-Special flag detected. Consumer 4 is terminating.
-Consumer 4 finished. Total sales amount processed by this consumer: 97740.48
+Special flag detected. Consumer 3 is terminating.
+Consumer 3 finished. Total sales amount processed by this consumer: 105706.80
 
 Special flag detected. Consumer 5 is terminating.
-Consumer 5 finished. Total sales amount processed by this consumer: 96347.28
+Consumer 5 finished. Total sales amount processed by this consumer: 103469.39
 
-Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 97107.82
+Special flag detected. Consumer 4 is terminating.
+Consumer 4 finished. Total sales amount processed by this consumer: 96941.92
 
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 104209.52
+Consumer 2 finished. Total sales amount processed by this consumer: 102354.11
 
 
 Report for Scenario: Producers = 10, Consumers = 5
 
 Store-wide total sales:
-  Store  1: $50549.08
-  Store  2: $52228.43
-  Store  3: $55488.66
-  Store  4: $55133.49
-  Store  5: $49798.20
-  Store  6: $49618.74
-  Store  7: $47078.06
-  Store  8: $49607.03
-  Store  9: $46318.91
-  Store 10: $45253.03
+  Store  1: $47329.48
+  Store  2: $48114.90
+  Store  3: $45157.38
+  Store  4: $53637.56
+  Store  5: $53696.28
+  Store  6: $53817.99
+  Store  7: $42922.44
+  Store  8: $53770.11
+  Store  9: $54723.38
+  Store 10: $53192.21
 Month-wise total sales:
-  Month  1: $43783.54
-  Month  2: $36369.02
-  Month  3: $39446.27
-  Month  4: $46828.61
-  Month  5: $40792.28
-  Month  6: $33700.30
-  Month  7: $37415.95
-  Month  8: $36576.07
-  Month  9: $51287.40
-  Month 10: $47067.52
-  Month 11: $48344.92
-  Month 12: $39461.74
-Aggregate sales: $501073.64
-Total time for simulation: 2359 ms
+  Month  1: $39813.72
+  Month  2: $38925.86
+  Month  3: $36010.91
+  Month  4: $36871.79
+  Month  5: $49251.25
+  Month  6: $34174.70
+  Month  7: $53697.79
+  Month  8: $53787.06
+  Month  9: $44555.06
+  Month 10: $38090.57
+  Month 11: $41915.16
+  Month 12: $39267.85
+Aggregate sales: $506361.72
+Total time for simulation: 2314 ms
 
 Running Scenario: Producers = 10, Consumers = 10
 
+Special flag detected. Consumer 3 is terminating.
+
 Special flag detected. Consumer 4 is terminating.
+Consumer 4 finished. Total sales amount processed by this consumer: 52962.75
 
 Special flag detected. Consumer 5 is terminating.
-Consumer 5 finished. Total sales amount processed by this consumer: 47996.18
-
-Special flag detected. Consumer 6 is terminating.
+Consumer 5 finished. Total sales amount processed by this consumer: 56827.62
 
 Special flag detected. Consumer 7 is terminating.
 
-Special flag detected. Consumer 10 is terminating.
-Consumer 10 finished. Total sales amount processed by this consumer: 47617.83
+Special flag detected. Consumer 6 is terminating.
+Consumer 6 finished. Total sales amount processed by this consumer: 53111.29
 
 Special flag detected. Consumer 8 is terminating.
-Consumer 8 finished. Total sales amount processed by this consumer: 50450.64
+Consumer 8 finished. Total sales amount processed by this consumer: 53592.66
 
 Special flag detected. Consumer 9 is terminating.
-Consumer 9 finished. Total sales amount processed by this consumer: 52930.33
+Consumer 9 finished. Total sales amount processed by this consumer: 51540.19
+
+Special flag detected. Consumer 10 is terminating.
+Consumer 10 finished. Total sales amount processed by this consumer: 49900.54
 
 Special flag detected. Consumer 1 is terminating.
-Consumer 1 finished. Total sales amount processed by this consumer: 49168.02
-
-Special flag detected. Consumer 3 is terminating.
-Consumer 3 finished. Total sales amount processed by this consumer: 48926.60
+Consumer 1 finished. Total sales amount processed by this consumer: 48683.53
 
 Special flag detected. Consumer 2 is terminating.
-Consumer 2 finished. Total sales amount processed by this consumer: 55358.68
-Consumer 4 finished. Total sales amount processed by this consumer: 45552.75
-Consumer 6 finished. Total sales amount processed by this consumer: 45253.56
-Consumer 7 finished. Total sales amount processed by this consumer: 53279.80
+Consumer 2 finished. Total sales amount processed by this consumer: 50799.57
+Consumer 3 finished. Total sales amount processed by this consumer: 46141.36
+Consumer 7 finished. Total sales amount processed by this consumer: 48579.10
 
 
 Report for Scenario: Producers = 10, Consumers = 10
 
 Store-wide total sales:
-  Store  1: $46063.80
-  Store  2: $60672.37
-  Store  3: $51403.30
-  Store  4: $49624.82
-  Store  5: $47064.36
-  Store  6: $50329.15
-  Store  7: $50155.56
-  Store  8: $48196.69
-  Store  9: $50336.76
-  Store 10: $42687.60
+  Store  1: $53229.31
+  Store  2: $53959.19
+  Store  3: $49738.33
+  Store  4: $56542.03
+  Store  5: $52883.99
+  Store  6: $47909.23
+  Store  7: $46479.32
+  Store  8: $48353.52
+  Store  9: $50656.97
+  Store 10: $52386.73
 Month-wise total sales:
-  Month  1: $35778.20
-  Month  2: $41173.28
-  Month  3: $42332.23
-  Month  4: $39205.36
-  Month  5: $40715.77
-  Month  6: $48113.69
-  Month  7: $39874.66
-  Month  8: $45345.11
-  Month  9: $40979.35
-  Month 10: $39596.48
-  Month 11: $45145.11
-  Month 12: $38275.18
-Aggregate sales: $496534.40
-Total time for simulation: 2362 ms
+  Month  1: $39318.20
+  Month  2: $40635.79
+  Month  3: $39357.54
+  Month  4: $41811.09
+  Month  5: $46712.58
+  Month  6: $47246.36
+  Month  7: $40361.34
+  Month  8: $35170.66
+  Month  9: $43048.72
+  Month 10: $42738.51
+  Month 11: $48487.82
+  Month 12: $47250.00
+Aggregate sales: $512138.62
+Total time for simulation: 2378 ms
 Execution Time Comparison:
 
 Producers  Consumers  Time (ms)      
 
-2          2          11719          
-2          5          11620          
-2          10         11522          
-5          2          4616           
-5          5          4544           
-5          10         4588           
-10         2          2310           
-10         5          2359           
-10         10         2362           
+2          2          11506          
+2          5          11871          
+2          10         11283          
+5          2          4619           
+5          5          4688           
+5          10         4658           
+10         2          2345           
+10         5          2314           
+10         10         2378           
